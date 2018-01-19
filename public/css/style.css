@@ -1,0 +1,6 @@
+/*profile image style*/
+.profileImage {
+	float: left;
+	border-radius: 1em 1em 1em 1em;
+	margin-right: 1em; 
+}
