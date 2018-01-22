@@ -51,7 +51,7 @@ html(lang='en')
           ul.app--tweet--list
             for tweet in getTweets
                 li
-                  strong.app--tweet--timestamp #{tweet.created_at}
+                  strong.app--tweet--timestamp #{tweet.created_at.slice(0,10)}
                   a.app--tweet--author
                     .app--avatar(style='background-image: url(' + profileImage + ')')
                       img(src='profileImage')
@@ -103,5 +103,5 @@ html(lang='en')
                       .app--avatar(style='background-image: url(' + message.sender.profile_image_url + ')')
                         img(src='message.sender.profile_image_url')
                       p.app--message--text #{message.text}
-                      p.app--message--timestamp #{message.created_at}
+                      p.app--message--timestamp #{message.created_at.slice(0,10)}
                       p #{message.sender.name}
